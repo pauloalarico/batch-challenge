@@ -2,13 +2,13 @@ spring:
   application:
     name: batch-challenge
 
-datasource:
-  username: ${DB_USERNAME}
-  password: ${DB_PASSWORD}
-  url: ${DB_URL}
-  jdbcUrl: ${DB_URL}
-  driver-class-name: org.postgresql.Driver
-  hikari:
+  datasource:
+   username: ${DB_USERNAME}
+   password: ${DB_PASSWORD}
+   url: ${DB_URL}
+   jdbcUrl: ${DB_URL}
+   driver-class-name: org.postgresql.Driver
+   hikari:
     jdbc-url: ${DB_URL}
   jpa:
     hibernate:
