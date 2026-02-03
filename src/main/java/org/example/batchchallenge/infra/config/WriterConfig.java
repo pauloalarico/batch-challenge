@@ -17,8 +17,8 @@ public class WriterConfig {
         return new JdbcBatchItemWriterBuilder<BankClient>()
                 .dataSource(dataSource)
                 .sql(
-                        "INSERT INTO bank_client(name, document_number, branch, account, value, reference_date)" +
-                                "VALUES(:name, documentNumber, branch, account, value, referenceDate"
+                        "INSERT INTO bank_client(id, name, document_number, branch, account, value, reference_date)" +
+                                "VALUES(:id, :name, :documentNumber, :branch, :account, :value, :referenceDate)"
                 )
                 .itemSqlParameterSourceProvider(new QueryParameters())
                 .build();
