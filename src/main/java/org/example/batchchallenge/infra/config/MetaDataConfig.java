@@ -2,20 +2,26 @@ package org.example.batchchallenge.infra.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ConfigurationProperties(prefix =  "datasource")
+@ConfigurationProperties(prefix = "spring.datasource")
+@Getter
+@Setter
 public class MetaDataConfig {
     private String username;
     private String password;
     private String url;
 
     @Bean
+    @Primary
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl(url);

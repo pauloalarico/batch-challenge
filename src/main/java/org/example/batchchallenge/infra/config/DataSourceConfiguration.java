@@ -1,6 +1,5 @@
 package org.example.batchchallenge.infra.config;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -12,7 +11,7 @@ import javax.sql.DataSource;
 public class DataSourceConfiguration {
 
     @Bean
-    public PlatformTransactionManager transactionManager(@Qualifier("dataSource") DataSource dataSource) {
+    public PlatformTransactionManager transactionManager(DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 }
