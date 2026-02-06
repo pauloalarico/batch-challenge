@@ -5,7 +5,6 @@ import org.springframework.batch.infrastructure.item.file.mapping.FieldSetMapper
 import org.springframework.batch.infrastructure.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
